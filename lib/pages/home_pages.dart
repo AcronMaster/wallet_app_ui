@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wallet_app_ui/utils/my_card.dart';
 
 class HomePages extends StatefulWidget {
   const HomePages({super.key});
@@ -19,20 +20,38 @@ class _HomePagesState extends State<HomePages> {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 24.0),
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(
-                    "My",
-                    style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+                  Row(
+                    children: [
+                      Text(
+                        "My",
+                        style: TextStyle(
+                            fontSize: 28, fontWeight: FontWeight.bold),
+                      ),
+                      Text(
+                        " Cards",
+                        style: TextStyle(fontSize: 28),
+                      ),
+                    ],
                   ),
-                  Text(
-                    " Cards",
-                    style: TextStyle(fontSize: 28),
-                  )
+
+                  //plus button
+                  Container(
+                      padding: EdgeInsets.all(4),
+                      decoration: BoxDecoration(
+                        color: Colors.grey[400],
+                        shape: BoxShape.circle,
+                      ),
+                      child: Icon(Icons.add)),
                 ],
               ),
-            )
-
+            ),
+            SizedBox(
+              height: 25,
+            ),
             //cards
+            MyCard(),
 
             // 3 buttons -> send + pay + bills
 
