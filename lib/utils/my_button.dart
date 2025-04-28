@@ -16,12 +16,12 @@ class MyButton extends StatelessWidget {
           height: 90,
           padding: EdgeInsets.all(20),
           decoration: BoxDecoration(
-            color: Colors.white,
+            //color: Colors.white,
             borderRadius: BorderRadius.circular(20),
             boxShadow: [
               BoxShadow(
-                color: Colors.grey.shade400,
-                blurRadius: 40,
+                color: Colors.white,
+                blurRadius: 30,
                 spreadRadius: 10,
               )
             ],
@@ -32,7 +32,7 @@ class MyButton extends StatelessWidget {
         ),
 
         SizedBox(
-          height: 12,
+          height: 4,
         ),
         //text
         Text(
